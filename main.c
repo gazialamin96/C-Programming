@@ -1,19 +1,38 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
-{
-    int a,b;
-    printf("Enter the two number's :");
-    scanf("%d %d",&a ,&b);
+int main() {
 
-    if(a<b){
-       printf("The smaller number is: %d",a);
+    char operator;
+    double firstNumber,secondNumber;
 
-    }else{
-        printf("a is getter then b");
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &operator);
 
-   }
+    printf("Enter two operands: ");
+    scanf("%lf %lf",&firstNumber, &secondNumber);
+
+    switch(operator)
+    {
+        case '+':
+            printf("%.1lf + %.1lf = %.1lf",firstNumber, secondNumber, firstNumber+secondNumber);
+            break;
+
+        case '-':
+            printf("%.1lf - %.1lf = %.1lf",firstNumber, secondNumber, firstNumber-secondNumber);
+            break;
+
+        case '*':
+            printf("%.1lf * %.1lf = %.1lf",firstNumber, secondNumber, firstNumber*secondNumber);
+            break;
+
+        case '/':
+            printf("%.1lf / %.1lf = %.1lf",firstNumber, secondNumber, firstNumber/secondNumber);
+            break;
+
+        // operator is doesn't match any case constant (+, -, *, /)
+        default:
+            printf("Error! operator is not correct");
+    }
 
     return 0;
 }
