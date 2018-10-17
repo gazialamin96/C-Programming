@@ -1,0 +1,76 @@
+#include<stdio.h>
+#include<conio.h>
+int main ()
+{
+    //char str1[6]= "Hello";
+    //char str2[6] = "gazi";
+    //char str3[40];
+    //char str4[50] = "Aiub";
+
+    //strcpy(str2, str1);
+    //strcpy(str3, str4);
+    //printf ("str1: %s\nstr2: %s\nstr3: %s\nstr4: %s\n", str1, str2, str3, str4);
+    //strcat(str1,str2);
+
+    //printf("\n%s",str1);
+    //puts(str2);
+     //strcmp(str1,str2);
+    //puts(str2);
+//combin the string with a same line
+//    char c[30];
+//    printf("Enter a char : ");
+//    gets(c);
+//    char d[30];
+//    printf("\nEnter a char : ");
+//    gets(d);
+//
+//
+//    if(strcmp(c,d)==0){
+//        printf("0");
+//    }else{
+//        printf("1");
+//    }
+//    getch();
+
+
+//    char s[50];
+//    int a;
+//    printf("Enter a char's : ");
+//    gets(s);
+//
+//    a=strlen(s);
+//    printf("%d",a);
+//character count
+//    char c[50];
+//    int i,count;
+//    count=0;
+//    printf("Enter a characters :");
+//    gets(c);
+//
+//    for(i=0; c[i]!='\n'; i++){
+//            if(c[i]=='a'){
+//                count+=1;
+//            }
+//    }
+//    printf("%d",count);
+
+//character count with scan
+    char c[50];
+    char d;
+    int i,count;
+    count=0;
+    printf("Enter a characters :");
+    gets(c);
+
+    for(i=0; c[i]!=10; i++){
+
+            scanf("%c",&d);
+            if(c[i]==d){
+                count+=1;
+            }
+    }
+    printf("%d",count);
+
+    getch();
+    return 0;
+}
